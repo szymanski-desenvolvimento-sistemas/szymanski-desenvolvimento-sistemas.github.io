@@ -1,0 +1,291 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Reset Document */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+body{
+    background: rgb(32, 32, 32);
+}
+
+.clear{
+    clear: both;
+}
+
+/* All Container */
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+header{
+    padding: 20px;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo, nav{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+header .logo img{
+    width: 106px;
+    height: 106px;
+    margin-right: 10px;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header nav ul li{
+    margin: 5px 0;
+    text-align: center;
+    width: 50%;
+    list-style: none;
+}
+
+header nav ul li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: all 2s;
+    padding: 5px;
+}
+
+/* Header Nav A Href Animations */
+header nav ul li a,
+header nav ul li a:after,
+header nav ul li a:before {
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+header nav ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+    text-align: center;
+    content: '';
+    margin: 0 auto;
+    opacity: 0;
+}
+
+header nav ul li a:hover {
+    z-index: 1;
+    color: #333;
+}
+
+header nav ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+/* Header Effects Keyframes */
+/* Keyframes */
+@keyframes fill{
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+}
+
+/* End Nav A Href Animations */
+
+header .header-background-image{
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header .header-background-image img{
+    width: 100%;
+}
+
+/* Materias Section */
+section.materias .materias-wrapper{
+    padding: 40px;
+}
+
+section.materias .materias-wrapper .materias-box-single{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+    backdrop-filter: blur(6px);
+    background-color: rgba(10, 116, 216, 0.4);
+    box-shadow: 0 0 10px 8px rgba(10, 116, 216, 0.35);
+}
+
+section.materias .materias-wrapper .materias-box-single img{
+    border-radius: 7px;
+    width: 100%;
+    height: 250px;
+}
+
+section.materias .materias-wrapper .materias-box-single h2, p{
+    margin: 10px 0;
+}
+
+section.materias .materias-wrapper .materias-box-single p{
+    margin-bottom: 25px;
+}
+
+section.materias .materias-wrapper .materias-box-single a{
+    width: 25%;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(10, 116, 216);
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+}
+
+section.materias .materias-wrapper .materias-box-single a:hover{
+    background-color: rgb(9, 91, 168);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(1) img{
+    background-image: url('../assets/analise_bg.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(2){
+    margin-bottom: 25px;
+    float: right;
+    text-align: right;
+    align-items: flex-end;
+    background-color: rgba(221, 171, 5, 0.4);
+    box-shadow: 0 0 10px 8px rgba(221, 171, 5, 0.35);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(2) img{
+    background-image: url('../assets/ciencias_bg.png');
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(2) a{
+    background-color: rgb(221, 171, 5);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(2) a:hover{
+    background-color: rgb(177, 136, 4);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(3){
+    background-color: rgba(68, 68, 68, 0.4);
+    box-shadow: 0 0 10px 8px rgba(68, 68, 68, 0.35);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(3) img{
+    background-image: url('../assets/logica_bg.png');
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(3) a{
+    background-color: rgb(68, 68, 68);
+}
+
+section.materias .materias-wrapper .materias-box-single:nth-child(3) a:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+/* Study Areas */
+section.study-areas{
+    padding: 40px;
+    width: 100%;
+    color: white;
+}
+
+section.study-areas .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section.study-areas h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+section.study-areas li{
+    color: #ebebeb;
+    font-size: 18px;
+    list-style: none;
+    margin: 5px 0;
+    letter-spacing: 1.5px;
+}
+
+/* Footer */
+footer{
+    padding: 40px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(26, 26, 26);
+}
+
+footer .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-container p{
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+}
