@@ -189,3 +189,61 @@ footer .footer-container p{
     font-weight: normal;
     font-size: 15px;
 }
+
+/********************************************************/
+/* Responsive - Media Queries */
+@media screen and (max-width: 800px){
+    /* Header */
+    header{
+        padding: 5px;
+    }
+
+    header .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    header .logo, nav{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul li{
+        width: 100%;
+    }
+
+    header .header-background-image{
+        height: 315px;
+    }
+
+    header .header-background-image img{
+        height: 100%;
+    }
+
+    /* Video Section */
+    section.video iframe{
+        width: 500px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 668px){
+    /* Footer */
+    footer{
+        padding: 25px;
+        text-align: center;
+    }
+
+    footer .footer-container p{
+        font-size: 18px;
+    }
+
+    /* Video Section */
+    section.video iframe{
+        width: 325px;
+        height: 200px;
+    }
+    
+}
