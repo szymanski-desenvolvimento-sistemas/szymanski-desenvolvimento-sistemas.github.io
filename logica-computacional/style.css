@@ -163,6 +163,19 @@ section.apresentation{
     margin-bottom: 15px;
 }
 
+section.apresentation a{
+    color: white;
+    font-weight: bold;
+}
+
+section.apresentation a, p{
+    margin: 5px;
+}
+
+section.apresentation p{
+    margin-bottom: 20px;
+}
+
 /* Video Section */
 section.video iframe{
     border: none;
@@ -222,7 +235,7 @@ footer .footer-container p{
     }
 
     /* Video Section */
-    section.video iframe{
+    section.apresentation iframe, section.video iframe{
         width: 500px;
         height: 300px;
     }
@@ -241,7 +254,7 @@ footer .footer-container p{
     }
 
     /* Video Section */
-    section.video iframe{
+    section.apresentation iframe, section.video iframe{
         width: 325px;
         height: 200px;
     }
